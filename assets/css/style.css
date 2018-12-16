@@ -1,0 +1,100 @@
+body {
+    padding-top: 50px;
+}
+
+.page-header {
+    text-align: center;
+}
+
+.page-header__title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.images-block {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -webkit-justify-content: space-around;
+    -ms-justify-content: space-around;
+    justify-content: space-around;
+}
+
+.images-block__item {
+    position: relative;
+    height: 300px;
+    margin: 5px;
+    flex-grow: 1;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    overflow: hidden;
+}
+
+.item-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    line-height: 100px;
+    transform: translateY(35%);
+    transition: transform 0.2s linear 0s,
+                background 0.2s linear 0s;
+}
+
+.item-header {
+    font-size: 1.5rem;
+}
+
+.item-header,
+.item-text {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.item-text,
+.btn-del {
+    opacity: 0;
+    transition: opacity 0.2s linear 0s;
+}
+
+.images-block__item:hover .item-wrapper {
+    background-color: rgba(0, 0, 0, 0.6);
+    transform: translateY(0);
+}
+
+.images-block__item:hover .item-text,
+.images-block__item:hover .btn-del {
+    opacity: 1;
+}
+
+.btn {
+    display: block;
+    margin: 10px auto;
+    padding: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #fff;
+    line-height: normal; /* для IE */
+    border-radius: 5px;
+    border: 3px solid rgb(43, 148, 177);
+    background-color: rgba(43, 148, 177, 0.9);
+    cursor: pointer;
+    transition: background 0.2s linear 0s,
+                color 0.2s linear 0s,
+                opacity 0.2s linear 0s
+}
+
+.btn:hover {
+    background-color: rgba(43, 148, 177, 0.7);
+}
+
+.btn:active {
+    background-color: rgba(43, 148, 177, 0.5);
+    color: rgb(43, 148, 177);
+}
